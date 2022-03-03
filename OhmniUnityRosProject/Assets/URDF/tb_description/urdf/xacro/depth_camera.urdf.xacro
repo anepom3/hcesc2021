@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="depth_camera">
+  <xacro:macro name="depth_camera" params="prefix:=camera  *origin *parent_link">
+    <xacro:property name="M_PI" value="3.14159"/>
+    <!-- urdf format -->
+    <link name="${prefix}_link">
+      <visual>
+        <geometry>
+          <!-- <mesh filename="package://tb_description/meshes/sensors/kinect.dae"/> -->
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <!-- <box size="0.07 0.3 0.09"/> -->
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.01"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix}_mount_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <xacro:insert_block name="parent_link" />
+      <!--<parent link="base_link"/>-->
+      <child link="${prefix}_link"/>
+    </joint>
+
+    <link name="${prefix}_optical_frame"/>
+
+    <joint name="${prefix}_optical_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${M_PI/2} ${M_PI} ${M_PI/2}"/>
+      <parent link="${prefix}_link"/>
+      <child link="${prefix}_optical_frame"/>
+    </joint>
+
+  </xacro:macro>
+</robot>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="differential_drive">
+  <xacro:macro name="differential_drive" params="prefix:=tb_sim wheelSeparation:=0.3  wheelDiameter:=0.2">
+  </xacro:macro>
+</robot>
