@@ -1,3 +1,6 @@
 [submodule "Ohmnilabs/Docker/docker-ohmni-rgbcamera"]
 	path = Ohmnilabs/Docker/docker-ohmni-rgbcamera
 	url = https://gitlab.com/ohmni-sdk/docker-ohmni-rgbcamera.git
+[submodule "Ohmnilabs/ROS/ROS-TCP-Endpoint"]
+	path = Ohmnilabs/ROS/ROS-TCP-Endpoint
+	url = https://github.com/Unity-Technologies/ROS-TCP-Endpoint.git
