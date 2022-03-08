@@ -1,4 +1,0 @@
-repository "hcesc2021"
-  path "/"
-    br "/main"
-    co "/main"
