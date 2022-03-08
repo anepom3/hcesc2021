@@ -5,7 +5,7 @@ RUN sudo apt-get update && sudo apt-get install -y vim iputils-ping net-tools py
 ENV ROS_WORKSPACE=/catkin_ws
 
 # Copy over ROS-TCP-Endpoint to connect with Unity
-COPY ../../ROS/ROS-TCP-Endpoint $ROS_WORKSPACE/src/ROS-TCP-Endpoint
+RUN git clone https://github.com/Unity-Technologies/ROS-TCP-Endpoint.git $ROS_WORKSPACE/src/ROS-TCP-Endpoint
 
 COPY ./set-up-workspace /setup.sh
 
