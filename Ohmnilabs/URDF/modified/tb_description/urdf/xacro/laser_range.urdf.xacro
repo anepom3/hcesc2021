@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="laser_range_sensor">
+  <xacro:macro name="laser_range_sensor" params="prefix:=laser_range_sensor  parent_link:=base_link *origin">
+    <xacro:property name="M_PI" value="3.14159"/>
+
+    <!-- urdf format -->
+    <link name="${prefix}_link">
+      <visual>
+        <geometry>
+           <box size="0.01 0.01 0.01"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.01"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix}_mount_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${parent_link}"/>
+      <child link="${prefix}_link"/>
+    </joint>
+
+  </xacro:macro>
+</robot>

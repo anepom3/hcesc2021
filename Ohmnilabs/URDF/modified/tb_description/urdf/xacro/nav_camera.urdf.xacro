@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="nav_camera">
+  <xacro:macro name="nav_camera" params="prefix:=camera *origin *parent_link">
+    <xacro:property name="M_PI" value="3.14159"/>
+    <!-- urdf format -->
+    <!-- dummy camera link attached to the camera rigid body -->
+    <link name="${prefix}_camera_link">
+      <visual>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.01"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix}_camera_mount_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <xacro:insert_block name="parent_link" />
+      <child link="${prefix}_camera_link"/>
+    </joint>
+
+    <link name="${prefix}_optical_frame"/>
+
+    <joint name="${prefix}_optical_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${M_PI/2} ${M_PI} ${M_PI/2}"/>
+      <parent link="${prefix}_camera_link"/>
+      <child link="${prefix}_optical_frame"/>
+    </joint>
+  </xacro:macro>
+</robot>

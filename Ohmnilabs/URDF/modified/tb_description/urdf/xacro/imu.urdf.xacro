@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="imu_sensor">
+  <xacro:macro name="imu_sensor" params="prefix:=imu_sensor  parent_link:=base_link *origin">
+    <xacro:property name="M_PI" value="3.14159"/>
+
+    <!-- urdf format -->
+    <link name="${prefix}_frame"/>
+
+    <joint name="${prefix}_mount_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${parent_link}"/>
+      <child link="${prefix}_frame"/>
+    </joint>
+    
+  </xacro:macro>
+</robot>
