@@ -1,0 +1,3 @@
+[submodule "Ohmnilabs/Docker/docker-ohmni-rgbcamera"]
+	path = Ohmnilabs/Docker/docker-ohmni-rgbcamera
+	url = https://gitlab.com/ohmni-sdk/docker-ohmni-rgbcamera.git
