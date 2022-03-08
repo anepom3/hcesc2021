@@ -4,6 +4,14 @@ using UnityEngine;
 using RosMessageTypes.UnityRoboticsDemo;
 using Unity.Robotics.ROSTCPConnector;
 
+// Here in this example, Unity acts as the client making a service call to
+// a ROS node acting as a server.
+
+// We make a request for a new destination by letting them know our current position.
+// Once they receive our message we then receive a new destination.
+// Once we reach that destination and it's been greater than our update time (1s),
+// we ask for a new destination.
+
 public class RosServiceCallExample : MonoBehaviour
 {
     ROSConnection ros;
@@ -34,6 +42,7 @@ public class RosServiceCallExample : MonoBehaviour
         float step = speed * Time.deltaTime; // Calculate distance to move
         cube.transform.position = Vector3.MoveTowards(cube.transform.position, destination, step);
         
+        // If we have made it to our destination, we then send a new service request with our current position.
         if(Vector3.Distance(cube.transform.position,destination) < delta && Time.time > awaitingResponseUntilTimestamp)
         {
             Debug.Log("Destination reached.");
@@ -56,6 +65,8 @@ public class RosServiceCallExample : MonoBehaviour
         }
     }
 
+    // Once we get a response with the the new destination, we then log the response from the server
+    // running ROS
     void Callback_Destination(PositionServiceResponse response)
     {
         awaitingResponseUntilTimestamp = -1;
