@@ -5,11 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - robot
+  - Door
+  - Cubicle
+  - Reception
+  - WaitingArea
+  - Home
+  - Lounge
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Floor Layout
   - Water
   - UI
   - 
