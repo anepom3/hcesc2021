@@ -1542,48 +1542,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
   m_PrefabInstance: {fileID: 2102411482}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &120967809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fields:
-  - Simulation Time(s)
-  - Lead3ElectricPotential(mV)
-  - "HeartRate(1\u2215min)"
-  - ArterialPressure(mmHg)
-  - MeanArterialPressure(mmHg)
-  - SystolicArterialPressure(mmHg)
-  - DiastolicArterialPressure(mmHg)
-  - OxygenSaturation()
-  - EndTidalCarbonDioxidePressure(mmHg)
-  - "RespirationRate(1\u2215min)"
-  - SkinTemperature(degC)
-  - Carina-CarbonDioxide-PartialPressure(mmHg)
-  - BloodVolume(mL)
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
 --- !u!1 &122749157
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,7 +2427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: -0.66435415, y: 0.27155483, z: -0.23727757}
+  m_FollowOffset: {x: -0.058497638, y: 1.1385548, z: -0.8730316}
   m_XDamping: 1.5
   m_YDamping: 1.5
   m_ZDamping: 1.5
@@ -3846,6 +3804,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4381973011225120, guid: fed00ff035fd2f74cb92d1f939493638, type: 3}
   m_PrefabInstance: {fileID: 294051932}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &301457024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fields:
+  - Simulation Time(s)
+  - Lead3ElectricPotential(mV)
+  - "HeartRate(1\u2215min)"
+  - ArterialPressure(mmHg)
+  - MeanArterialPressure(mmHg)
+  - SystolicArterialPressure(mmHg)
+  - DiastolicArterialPressure(mmHg)
+  - OxygenSaturation()
+  - EndTidalCarbonDioxidePressure(mmHg)
+  - "RespirationRate(1\u2215min)"
+  - SkinTemperature(degC)
+  - Carina-CarbonDioxide-PartialPressure(mmHg)
+  - BloodVolume(mL)
+  timeStampList:
+    list: []
+  valuesTable:
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
 --- !u!1001 &306955059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12534,7 +12534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357804729287523128, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.33
+      value: -4.148
       objectReference: {fileID: 0}
     - target: {fileID: 4357804729287523128, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12542,11 +12542,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357804729287523128, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.01
+      value: -6.583
       objectReference: {fileID: 0}
     - target: {fileID: 4357804729287523128, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7460982
+      value: 0.99911994
       objectReference: {fileID: 0}
     - target: {fileID: 4357804729287523128, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_LocalRotation.x
@@ -12554,7 +12554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357804729287523128, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.665836
+      value: 0.041945286
       objectReference: {fileID: 0}
     - target: {fileID: 4357804729287523128, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_LocalRotation.z
@@ -12566,7 +12566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357804729287523128, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 83.493
+      value: 4.808
       objectReference: {fileID: 0}
     - target: {fileID: 4357804729287523128, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -15958,7 +15958,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 1094922642}
   m_Follow: {fileID: 1094922642}
   m_Lens:
     FieldOfView: 55
@@ -15982,8 +15982,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543880511}
-  m_LocalRotation: {x: 0.08959397, y: 0.89843386, z: -0.21687655, w: 0.37115228}
-  m_LocalPosition: {x: -17.718, y: 1.522, z: -4.397}
+  m_LocalRotation: {x: 0.35495484, y: 0.061933015, z: -0.023573905, w: 0.93253183}
+  m_LocalPosition: {x: -19.194395, y: 2.389, z: -5.6255407}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 201228613}
@@ -17779,6 +17779,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tb_sim_prefab_stable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4357804729287523268, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4357804729589650867, guid: 635ed2466abc65446a64d0539c7e35f6, type: 3}
       propertyPath: m_ParentAnchorPosition.x
       value: -0.000000029802322
@@ -19405,8 +19409,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855865542}
-  m_LocalRotation: {x: 0.08959398, y: 0.8984339, z: -0.21687657, w: 0.3711523}
-  m_LocalPosition: {x: -17.718, y: 1.522, z: -4.397}
+  m_LocalRotation: {x: 0.35495484, y: 0.061933015, z: -0.023573905, w: 0.93253183}
+  m_LocalPosition: {x: -19.194395, y: 2.389, z: -5.6255407}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
